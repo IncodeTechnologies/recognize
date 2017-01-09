@@ -1,0 +1,11 @@
+/Users/eugenekislyy/Documents/workspace2/recognition/src/main/java/com/incode/recognition/domain/Point.java
+/Users/eugenekislyy/Documents/workspace2/recognition/src/main/java/com/incode/recognition/domain/RecognitionRepository.java
+/Users/eugenekislyy/Documents/workspace2/recognition/src/main/java/com/incode/recognition/service/AmazonS3Service.java
+/Users/eugenekislyy/Documents/workspace2/recognition/src/main/java/com/incode/recognition/domain/FaceRectangle.java
+/Users/eugenekislyy/Documents/workspace2/recognition/src/main/java/com/incode/recognition/controller/RecognitionController.java
+/Users/eugenekislyy/Documents/workspace2/recognition/src/main/java/com/incode/recognition/Application.java
+/Users/eugenekislyy/Documents/workspace2/recognition/src/main/java/com/incode/recognition/domain/FacialPoints.java
+/Users/eugenekislyy/Documents/workspace2/recognition/src/main/java/com/incode/recognition/domain/Person.java
+/Users/eugenekislyy/Documents/workspace2/recognition/src/main/java/com/incode/recognition/configuration/WebSecurityConfig.java
+/Users/eugenekislyy/Documents/workspace2/recognition/src/main/java/com/incode/recognition/domain/Recognition.java
+/Users/eugenekislyy/Documents/workspace2/recognition/src/main/java/com/incode/recognition/service/RecognitionService.java
