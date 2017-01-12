@@ -1,3 +1,6 @@
+API
+https://app.apiary.io/recognitionapi1/editor
+
 mvn package -Dmaven.test.skip=true docker:build
 
 docker tag recognize/recognition 033150149688.dkr.ecr.us-west-2.amazonaws.com/recognition:latest
