@@ -12,13 +12,18 @@ import com.incode.recognition.service.RecognitionService;
 
 @RestController
 public class RecognitionController {
-
+	
 	@Autowired
 	private RecognitionService recognitionService;
-
+	
 	@PostMapping("/recognition")
 	public void recognition(@Valid @RequestBody Recognition recognition) {
 		recognitionService.save(recognition);
 	}
-
+	
+	@PostMapping("/realtime")
+	public void realtime(@Valid @RequestBody Recognition recognition) {
+		recognitionService.save(recognition);
+	}
+	
 }
