@@ -9,4 +9,4 @@ docker push 033150149688.dkr.ecr.us-west-2.amazonaws.com/recognition:latest
 
 (copypaste login command if needed)
 
-eb deploy
+eb deploy (or eb deploy Sample-env-1)
