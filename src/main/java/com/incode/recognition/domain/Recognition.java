@@ -28,6 +28,7 @@ public class Recognition {
 	private String clientType;
 	
 	private String faceDetectorType;
+	private String recognitionVersion;
 	
 	@CreationTimestamp
 	private Date creationDate;
@@ -116,6 +117,14 @@ public class Recognition {
 	
 	public void setCameraSettings(CameraSettings cameraSettings) {
 		this.cameraSettings = cameraSettings;
+	}
+	
+	public String getRecognitionVersion() {
+		return recognitionVersion;
+	}
+	
+	public void setRecognitionVersion(String recognitionVersion) {
+		this.recognitionVersion = recognitionVersion;
 	}
 	
 }
