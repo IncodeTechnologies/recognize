@@ -1,6 +1,6 @@
 package com.incode.recognition.domain;
 
-public class FaceRectangle {
+public class FacialRectangle {
 
 	private Integer x;
 	private Integer y;

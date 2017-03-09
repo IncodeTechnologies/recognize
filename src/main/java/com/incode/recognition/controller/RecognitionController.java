@@ -21,9 +21,4 @@ public class RecognitionController {
 		recognitionService.save(recognition);
 	}
 	
-	@PostMapping("/realtime")
-	public void realtime(@Valid @RequestBody Recognition recognition) {
-		recognitionService.save(recognition);
-	}
-	
 }
