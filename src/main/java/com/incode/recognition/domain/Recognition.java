@@ -23,7 +23,7 @@ public class Recognition {
 	private String photoUrl;
 	private Long faceDetectionTimeMs;
 	
-	private Long faceAligmentTimeMs;
+	private Long facialPointsDetectionTimeMs;
 	private String softwareVersion;
 	private String clientType;
 	
@@ -95,12 +95,12 @@ public class Recognition {
 		this.faceDetectorType = faceDetectorType;
 	}
 	
-	public Long getFaceAligmentTimeMs() {
-		return faceAligmentTimeMs;
+	public Long getFacialPointsDetectionTimeMs() {
+		return facialPointsDetectionTimeMs;
 	}
 	
-	public void setFaceAligmentTimeMs(Long faceAligmentTimeMs) {
-		this.faceAligmentTimeMs = faceAligmentTimeMs;
+	public void setFacialPointsDetectionTimeMs(Long facialPointsDetectionTimeMs) {
+		this.facialPointsDetectionTimeMs = facialPointsDetectionTimeMs;
 	}
 	
 	public Date getCreationDate() {
