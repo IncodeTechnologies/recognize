@@ -1,6 +1,7 @@
 package com.incode.recognition.domain;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
@@ -16,6 +17,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.persistence.MapKey;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -35,7 +37,8 @@ public class Person {
 	private Recognition recognition;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "person")
-	private List<FacialPoint> facialPoints;
+	@MapKey(name = "name")
+	private Map<String, FacialPoint> facialPoints;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "person")
 	private List<RealTimeFrame> realtimeFrames;
@@ -89,11 +92,11 @@ public class Person {
 		this.personId = personId;
 	}
 	
-	public List<FacialPoint> getFacialPoints() {
+	public Map<String, FacialPoint> getFacialPoints() {
 		return facialPoints;
 	}
 	
-	public void setFacialPoints(List<FacialPoint> facialPoints) {
+	public void setFacialPoints(Map<String, FacialPoint> facialPoints) {
 		this.facialPoints = facialPoints;
 	}
 	

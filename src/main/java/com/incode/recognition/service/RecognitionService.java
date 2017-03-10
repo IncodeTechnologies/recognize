@@ -28,13 +28,13 @@ public class RecognitionService {
 					List<String> urls = amazonS3Service.getUserImageLinks(person.getFacebookId());
 					person.setUrls(urls);
 				}
-				for (FacialPoint facialPoint : person.getFacialPoints()) {
+				for (FacialPoint facialPoint : person.getFacialPoints().values()) {
 					facialPoint.setPerson(person);
 				}
 				
 				for (RealTimeFrame realTimeFrame : person.getRealtimeFrames()) {
 					realTimeFrame.setPerson(person);
-					for (FacialPoint facialPoint : realTimeFrame.getFacialPoints()) {
+					for (FacialPoint facialPoint : realTimeFrame.getFacialPoints().values()) {
 						facialPoint.setRealTimeFrame(realTimeFrame);
 					}
 					
