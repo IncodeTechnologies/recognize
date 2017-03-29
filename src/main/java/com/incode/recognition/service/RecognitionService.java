@@ -1,6 +1,7 @@
 package com.incode.recognition.service;
 
 import java.util.List;
+import java.util.Map.Entry;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,14 +29,16 @@ public class RecognitionService {
 					List<String> urls = amazonS3Service.getUserImageLinks(person.getFacebookId());
 					person.setUrls(urls);
 				}
-				for (FacialPoint facialPoint : person.getFacialPoints().values()) {
-					facialPoint.setPerson(person);
+				for (Entry<String, FacialPoint> facialPoint : person.getFacialPoints().entrySet()) {
+					facialPoint.getValue().setPerson(person);
+					facialPoint.getValue().setName(facialPoint.getKey());
 				}
 				
 				for (RealTimeFrame realTimeFrame : person.getRealtimeFrames()) {
 					realTimeFrame.setPerson(person);
-					for (FacialPoint facialPoint : realTimeFrame.getFacialPoints().values()) {
-						facialPoint.setRealTimeFrame(realTimeFrame);
+					for (Entry<String, FacialPoint> facialPoint : realTimeFrame.getFacialPoints().entrySet()) {
+						facialPoint.getValue().setRealTimeFrame(realTimeFrame);
+						facialPoint.getValue().setName(facialPoint.getKey());
 					}
 					
 				}
